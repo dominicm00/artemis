@@ -1,3 +1,31 @@
 packages:
   - 'apps/*'
   - 'packages/*'
+
+catalog:
+  # Runtime dependencies
+  "@tanstack/react-query": "^5.64.2"
+  "@trpc/client": "^11.0.0-rc.714"
+  "@trpc/react-query": "^11.0.0-rc.714"
+  "@trpc/server": "^11.0.0-rc.714"
+  "react": "^19.0.0"
+  "react-dom": "^19.0.0"
+  "cors": "^2.8.5"
+  "express": "^4.21.2"
+  "ws": "^8.18.0"
+  "zod": "^3.24.1"
+  
+  # Development dependencies
+  "@tailwindcss/vite": "^4.1.1"
+  "@tanstack/react-query-devtools": "^5.64.2"
+  "@types/cors": "^2.8.17"
+  "@types/express": "^5.0.0"
+  "@types/node": "^22.10.6"
+  "@types/react": "^19.0.3"
+  "@types/react-dom": "^19.0.2"
+  "@types/ws": "^8.5.14"
+  "@vitejs/plugin-react": "^4.3.4"
+  "eslint": "^9.17.0"
+  "tailwindcss": "^4.1.1"
+  "typescript": "^5.7.2"
+  "vite": "^6.0.7"

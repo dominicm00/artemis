@@ -12,24 +12,24 @@
   },
   "dependencies": {
     "@artemis/types": "workspace:*",
-    "@tanstack/react-query": "^5.64.2",
-    "@trpc/client": "^11.0.0-rc.714",
-    "@trpc/react-query": "^11.0.0-rc.714",
-    "@trpc/server": "^11.0.0-rc.714",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@tanstack/react-query": "catalog:",
+    "@trpc/client": "catalog:",
+    "@trpc/react-query": "catalog:",
+    "@trpc/server": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@artemis/eslint-config": "workspace:*",
     "@artemis/typescript-config": "workspace:*",
-    "@tailwindcss/vite": "^4.1.1",
-    "@tanstack/react-query-devtools": "^5.64.2",
-    "@types/react": "^19.0.3",
-    "@types/react-dom": "^19.0.2",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "tailwindcss": "^4.1.1",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.7"
+    "@tailwindcss/vite": "catalog:",
+    "@tanstack/react-query-devtools": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }

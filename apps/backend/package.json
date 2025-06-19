@@ -12,20 +12,20 @@
   },
   "dependencies": {
     "@artemis/types": "workspace:*",
-    "@trpc/server": "^11.0.0-rc.714",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "ws": "^8.18.0",
-    "zod": "^3.24.1"
+    "@trpc/server": "catalog:",
+    "cors": "catalog:",
+    "express": "catalog:",
+    "ws": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@artemis/eslint-config": "workspace:*",
     "@artemis/typescript-config": "workspace:*",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.10.6",
-    "@types/ws": "^8.5.14",
-    "eslint": "^9.17.0",
-    "typescript": "^5.7.2"
+    "@types/cors": "catalog:",
+    "@types/express": "catalog:",
+    "@types/node": "catalog:",
+    "@types/ws": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   }
 }
