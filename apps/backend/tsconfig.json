@@ -1,0 +1,5 @@
+{
+  "extends": "@artemis/typescript-config/node",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

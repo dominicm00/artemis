@@ -1,0 +1,17 @@
+{
+  "name": "@artemis/types",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./api": "./src/api.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@artemis/typescript-config": "workspace:*",
+    "typescript": "^5.7.2"
+  }
+}
