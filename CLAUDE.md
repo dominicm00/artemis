@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a modern pnpm monorepo using Node.js v24's native TypeScript support (`--experimental-strip-types`), eliminating build steps during development. The stack includes React 19, tRPC v11, Tailwind CSS v4, and Vite.
+This is a modern pnpm monorepo using Node.js v24's native TypeScript support, eliminating build steps during development. The stack includes React 19, tRPC v11, Tailwind CSS v4, and Vite.
 
 ## Architecture
 
@@ -47,6 +47,9 @@ pnpm typecheck
 # Linting
 pnpm lint
 
+# Formatting
+pnpm format
+
 # Clean all node_modules and artifacts
 pnpm clean
 ```
@@ -88,12 +91,6 @@ pnpm clean
 - Base config: `packages/eslint-config/index.js`
 - React config: `packages/eslint-config/react.js`
 
-### pnpm Configuration (.npmrc)
-
-- `auto-install-peers=true` - Automatically installs peer dependencies
-- `dedupe-peer-dependents=true` - Deduplicates peer dependencies
-- `node-linker=isolated` - Ensures proper TypeScript module resolution
-
 ## Critical Implementation Notes
 
 1. **Import Extensions**: Always use `.ts` or `.tsx` extensions in imports for backend code
@@ -104,8 +101,12 @@ pnpm clean
 ## Technology Versions
 
 - Node.js: v24+
-- TypeScript: 5.7.2+ (required by tRPC v11)
+- TypeScript: 5.8.3+
 - React: v19
 - tRPC: v11
 - Tailwind CSS: v4
-- pnpm: v9+
+- pnpm: v10+
+
+## Documentation Principles
+
+- Keep documentation concise and don't duplicate existing information. Documentation is entropy.

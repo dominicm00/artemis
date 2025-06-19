@@ -1,19 +1,28 @@
 import { useState } from "react";
-import { trpc } from "./lib/trpc.ts";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useTRPC } from "./lib/trpc.ts";
 
 export function App() {
   const [newUserName, setNewUserName] = useState("");
   const [newUserEmail, setNewUserEmail] = useState("");
 
-  const { data: users, isLoading, refetch } = trpc.user.list.useQuery();
+  const trpc = useTRPC();
+  const queryClient = useQueryClient();
 
-  const createUser = trpc.user.create.useMutation({
-    onSuccess: () => {
-      setNewUserName("");
-      setNewUserEmail("");
-      void refetch();
-    },
-  });
+  // Using the new queryOptions pattern for queries
+  const { data: users, isLoading } = useQuery(trpc.user.list.queryOptions());
+
+  // Using the new mutationOptions pattern for mutations
+  const createUser = useMutation(
+    trpc.user.create.mutationOptions({
+      onSuccess: () => {
+        setNewUserName("");
+        setNewUserEmail("");
+        // Invalidate the users list query to refetch
+        void queryClient.invalidateQueries(trpc.user.list.queryFilter());
+      },
+    }),
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
