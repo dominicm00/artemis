@@ -8,6 +8,7 @@
     "allowImportingTsExtensions": true,
     "allowArbitraryExtensions": true,
     "resolveJsonModule": true,
+    "erasableSyntaxOnly": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

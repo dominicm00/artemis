@@ -21,15 +21,6 @@
   },
   "devDependencies": {
     "@artemis/eslint-config": "workspace:*",
-    "@artemis/typescript-config": "workspace:*",
-    "@tailwindcss/vite": "catalog:",
-    "@tanstack/react-query-devtools": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
-    "eslint": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "@artemis/typescript-config": "workspace:*"
   }
 }

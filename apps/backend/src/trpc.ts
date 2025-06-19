@@ -2,7 +2,7 @@ import { initTRPC } from '@trpc/server';
 import type { CreateExpressContextOptions } from '@trpc/server/adapters/express';
 import { ZodError } from 'zod';
 
-export const createContext = async (opts: CreateExpressContextOptions) => {
+export const createContext = async (_opts: CreateExpressContextOptions) => {
   // You can add auth logic here
   return {};
 };

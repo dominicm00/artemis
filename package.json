@@ -15,8 +15,24 @@
     "update-catalog": "node scripts/update-catalog.js"
   },
   "devDependencies": {
-    "typescript": "catalog:",
-    "eslint": "catalog:"
+    "@tailwindcss/vite": "4.1.10",
+    "@tanstack/react-query-devtools": "5.80.7",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.3",
+    "@types/node": "24.0.3",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "@types/ws": "8.18.1",
+    "@vitejs/plugin-react": "4.5.2",
+    "eslint": "9.29.0",
+    "tailwindcss": "4.1.10",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "@eslint/js": "9.29.0",
+    "typescript-eslint": "8.34.1",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "globals": "16.2.0"
   },
   "engines": {
     "node": ">=24.0.0",

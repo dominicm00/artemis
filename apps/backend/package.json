@@ -20,12 +20,6 @@
   },
   "devDependencies": {
     "@artemis/eslint-config": "workspace:*",
-    "@artemis/typescript-config": "workspace:*",
-    "@types/cors": "catalog:",
-    "@types/express": "catalog:",
-    "@types/node": "catalog:",
-    "@types/ws": "catalog:",
-    "eslint": "catalog:",
-    "typescript": "catalog:"
+    "@artemis/typescript-config": "workspace:*"
   }
 }
