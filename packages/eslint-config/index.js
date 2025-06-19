@@ -1,14 +1,21 @@
-import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import globals from 'globals';
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import globals from "globals";
 
 export default tseslint.config(
   {
-    ignores: ['**/dist/**', '**/node_modules/**', '**/.next/**', '**/coverage/**'],
+    ignores: [
+      "**/dist/**",
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/coverage/**",
+      "eslint.config.js",
+      "vite.config.ts",
+    ],
   },
   js.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       globals: {
@@ -16,26 +23,26 @@ export default tseslint.config(
         ...globals.node,
       },
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module",
       },
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': [
-        'error',
+      "@typescript-eslint/no-unused-vars": [
+        "error",
         {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
         },
       ],
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
         {
-          prefer: 'type-imports',
-          fixStyle: 'separate-type-imports',
+          prefer: "type-imports",
+          fixStyle: "separate-type-imports",
         },
       ],
-      '@typescript-eslint/no-import-type-side-effects': 'error',
+      "@typescript-eslint/no-import-type-side-effects": "error",
     },
-  }
+  },
 );

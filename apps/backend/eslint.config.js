@@ -1,3 +1,13 @@
-import baseConfig from '@artemis/eslint-config';
+import baseConfig from "@artemis/eslint-config";
 
-export default baseConfig;
+export default [
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  ...baseConfig,
+];

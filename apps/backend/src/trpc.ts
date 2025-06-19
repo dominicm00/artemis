@@ -1,6 +1,6 @@
-import { initTRPC } from '@trpc/server';
-import type { CreateExpressContextOptions } from '@trpc/server/adapters/express';
-import { ZodError } from 'zod';
+import { initTRPC } from "@trpc/server";
+import type { CreateExpressContextOptions } from "@trpc/server/adapters/express";
+import { ZodError } from "zod";
 
 export const createContext = async (_opts: CreateExpressContextOptions) => {
   // You can add auth logic here
@@ -16,9 +16,7 @@ const t = initTRPC.context<Context>().create({
       data: {
         ...shape.data,
         zodError:
-          error.cause instanceof ZodError
-            ? error.cause.flatten()
-            : null,
+          error.cause instanceof ZodError ? error.cause.flatten() : null,
       },
     };
   },

@@ -54,6 +54,7 @@ pnpm dev
 ```
 
 This will start:
+
 - Frontend at http://localhost:3000
 - Backend at http://localhost:4000
 
@@ -94,6 +95,7 @@ pnpm clean
 ### Type Safety
 
 The monorepo maintains end-to-end type safety:
+
 - tRPC router types are exported from backend
 - Frontend imports these types for full type safety
 - Shared types package ensures consistency

@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { trpc } from './lib/trpc.ts';
+import { useState } from "react";
+import { trpc } from "./lib/trpc.ts";
 
 export function App() {
-  const [newUserName, setNewUserName] = useState('');
-  const [newUserEmail, setNewUserEmail] = useState('');
+  const [newUserName, setNewUserName] = useState("");
+  const [newUserEmail, setNewUserEmail] = useState("");
 
   const { data: users, isLoading, refetch } = trpc.user.list.useQuery();
-  
+
   const createUser = trpc.user.create.useMutation({
     onSuccess: () => {
-      setNewUserName('');
-      setNewUserEmail('');
-      refetch();
+      setNewUserName("");
+      setNewUserEmail("");
+      void refetch();
     },
   });
 
@@ -36,27 +36,37 @@ export function App() {
           <h2 className="text-2xl font-semibold mb-4">Add User</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Name
               </label>
               <input
                 type="text"
                 id="name"
                 value={newUserName}
-                onChange={(e) => setNewUserName(e.target.value)}
+                onChange={(e) => {
+                  setNewUserName(e.target.value);
+                }}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="John Doe"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 value={newUserEmail}
-                onChange={(e) => setNewUserEmail(e.target.value)}
+                onChange={(e) => {
+                  setNewUserEmail(e.target.value);
+                }}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="john@example.com"
               />
@@ -66,7 +76,7 @@ export function App() {
               disabled={createUser.isPending}
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
             >
-              {createUser.isPending ? 'Creating...' : 'Create User'}
+              {createUser.isPending ? "Creating..." : "Create User"}
             </button>
           </form>
         </div>
@@ -84,7 +94,9 @@ export function App() {
                       <p className="text-sm font-medium text-gray-900 truncate">
                         {user.name}
                       </p>
-                      <p className="text-sm text-gray-500 truncate">{user.email}</p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {user.email}
+                      </p>
                     </div>
                     <div className="text-sm text-gray-500">
                       {new Date(user.createdAt).toLocaleDateString()}

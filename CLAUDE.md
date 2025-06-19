@@ -9,6 +9,7 @@ This is a modern pnpm monorepo using Node.js v24's native TypeScript support (`-
 ## Architecture
 
 ### Workspace Structure
+
 ```
 artemis/
 ├── apps/
@@ -53,18 +54,21 @@ pnpm clean
 ## Development Workflow
 
 ### Backend Development
+
 - Server runs with `node --watch src/index.ts`
 - tRPC routers are in `apps/backend/src/routers/`
 - Context is created in `apps/backend/src/trpc.ts`
 - All imports must use `.ts` extensions
 
 ### Frontend Development
+
 - Vite handles TypeScript/JSX transformation
 - tRPC client setup in `apps/frontend/src/lib/trpc.ts`
 - Tailwind CSS v4 integrated via `@tailwindcss/vite` plugin
 - React 19 with TanStack Query for data fetching
 
 ### Adding New Packages
+
 1. Create directory under `packages/` or `apps/`
 2. Add `package.json` with proper exports
 3. Reference from other packages using `workspace:*`
@@ -72,17 +76,20 @@ pnpm clean
 ## Important Configuration Details
 
 ### TypeScript Configuration
+
 - Base config in `packages/typescript-config/base.json`
 - Uses `moduleResolution: "bundler"` and `allowImportingTsExtensions: true`
 - React apps extend `packages/typescript-config/react.json`
 - Node apps extend `packages/typescript-config/node.json`
 
 ### ESLint Setup
+
 - Flat config format (ESLint v9)
 - Base config: `packages/eslint-config/index.js`
 - React config: `packages/eslint-config/react.js`
 
 ### pnpm Configuration (.npmrc)
+
 - `auto-install-peers=true` - Automatically installs peer dependencies
 - `dedupe-peer-dependents=true` - Deduplicates peer dependencies
 - `node-linker=isolated` - Ensures proper TypeScript module resolution
@@ -95,6 +102,7 @@ pnpm clean
 4. **Vite Proxy**: Frontend proxies `/trpc` requests to backend on port 4000
 
 ## Technology Versions
+
 - Node.js: v24+
 - TypeScript: 5.7.2+ (required by tRPC v11)
 - React: v19
