@@ -1,31 +1,41 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  - apps/*
+  - packages/*
 
 catalog:
-  # Runtime dependencies
-  "@tanstack/react-query": "^5.64.2"
-  "@trpc/client": "^11.0.0-rc.714"
-  "@trpc/react-query": "^11.0.0-rc.714"
-  "@trpc/server": "^11.0.0-rc.714"
-  "react": "^19.0.0"
-  "react-dom": "^19.0.0"
-  "cors": "^2.8.5"
-  "express": "^4.21.2"
-  "ws": "^8.18.0"
-  "zod": "^3.24.1"
-  
-  # Development dependencies
-  "@tailwindcss/vite": "^4.1.1"
-  "@tanstack/react-query-devtools": "^5.64.2"
-  "@types/cors": "^2.8.17"
-  "@types/express": "^5.0.0"
-  "@types/node": "^22.10.6"
-  "@types/react": "^19.0.3"
-  "@types/react-dom": "^19.0.2"
-  "@types/ws": "^8.5.14"
-  "@vitejs/plugin-react": "^4.3.4"
-  "eslint": "^9.17.0"
-  "tailwindcss": "^4.1.1"
-  "typescript": "^5.7.2"
-  "vite": "^6.0.7"
+  "@tanstack/react-query": 5.80.7
+  "@trpc/client": 11.4.2
+  "@trpc/react-query": 11.4.2
+  "@trpc/server": 11.4.2
+  react: 19.1.0
+  react-dom: 19.1.0
+  cors: 2.8.5
+  express: 5.1.0
+  ws: 8.18.2
+  zod: 3.25.67
+
+  # Dev dependencies
+  "@tailwindcss/vite": 4.1.10
+  "@tanstack/react-query-devtools": 5.80.7
+  "@types/cors": 2.8.19
+  "@types/express": 5.0.3
+  "@types/node": 24.0.3
+  "@types/react": 19.1.8
+  "@types/react-dom": 19.1.6
+  "@types/ws": 8.18.1
+  "@vitejs/plugin-react": 4.5.2
+  eslint: 9.29.0
+  tailwindcss: 4.1.10
+  typescript: 5.8.3
+  vite: 6.3.5
+  "@eslint/js": 9.29.0
+  typescript-eslint: 8.34.1
+  eslint-plugin-react: 7.37.5
+  eslint-plugin-react-hooks: 5.2.0
+  globals: 16.2.0
+
+catalogMode: strict
+
+onlyBuiltDependencies:
+  - "@tailwindcss/oxide"
+  - esbuild

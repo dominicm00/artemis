@@ -11,11 +11,12 @@
     "build": "pnpm run --recursive build",
     "lint": "pnpm run --recursive lint",
     "typecheck": "pnpm run --recursive typecheck",
-    "clean": "pnpm run --recursive clean && rm -rf node_modules"
+    "clean": "pnpm run --recursive clean && rm -rf node_modules",
+    "update-catalog": "node scripts/update-catalog.js"
   },
   "devDependencies": {
-    "@types/node": "^24.0.3",
-    "typescript": "^5.8.3"
+    "typescript": "catalog:",
+    "eslint": "catalog:"
   },
   "engines": {
     "node": ">=24.0.0",
