@@ -70,7 +70,10 @@ pnpm clean
 - Tailwind CSS v4 integrated via `@tailwindcss/vite` plugin
 - React 19 with TanStack Query for data fetching
 - base-ui for an unstyled component library
-- Tanstack Router for routing
+- TanStack Router with file-based routing:
+  - Routes defined in `src/routes/` directory
+  - `__root.tsx` provides app layout and navigation
+  - Route tree auto-generated at `src/routeTree.gen.ts` by vite plugin
 
 ### Adding New Packages
 
@@ -99,6 +102,7 @@ pnpm clean
 2. **Type Exports**: The `AppRouter` type flows from backend → types package → frontend
 3. **No Build for Dev**: Development runs source TypeScript directly, only production needs builds
 4. **Vite Proxy**: Frontend proxies `/trpc` requests to backend on port 4000
+5. **File-based Routing**: Routes auto-generated from `src/routes/` directory structure
 
 ## Technology Versions
 

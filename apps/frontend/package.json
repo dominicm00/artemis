@@ -13,6 +13,8 @@
   "dependencies": {
     "@artemis/types": "workspace:*",
     "@tanstack/react-query": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/router-devtools": "catalog:",
     "@trpc/client": "catalog:",
     "@trpc/server": "catalog:",
     "@trpc/tanstack-react-query": "catalog:",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@artemis/backend": "workspace:*",
     "@artemis/eslint-config": "workspace:*",
-    "@artemis/typescript-config": "workspace:*"
+    "@artemis/typescript-config": "workspace:*",
+    "@tanstack/router-plugin": "catalog:"
   }
 }

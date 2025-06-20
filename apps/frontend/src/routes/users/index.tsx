@@ -1,8 +1,13 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { useTRPC } from "./lib/trpc.ts";
+import { useTRPC } from "../../lib/trpc.ts";
 
-export function App() {
+export const Route = createFileRoute('/users/')({
+  component: Users,
+})
+
+function Users() {
   const [newUserName, setNewUserName] = useState("");
   const [newUserEmail, setNewUserEmail] = useState("");
 
@@ -35,10 +40,10 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          Artemis - tRPC + React 19 Demo
+          User Management
         </h1>
 
         <div className="bg-white shadow rounded-lg p-6 mb-8">
