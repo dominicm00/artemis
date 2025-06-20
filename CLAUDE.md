@@ -69,6 +69,8 @@ pnpm clean
 - tRPC client setup in `apps/frontend/src/lib/trpc.ts`
 - Tailwind CSS v4 integrated via `@tailwindcss/vite` plugin
 - React 19 with TanStack Query for data fetching
+- base-ui for an unstyled component library
+- Tanstack Router for routing
 
 ### Adding New Packages
 

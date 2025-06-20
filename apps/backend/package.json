@@ -1,8 +1,11 @@
 {
-  "name": "backend",
+  "name": "@artemis/backend",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    "./router": "./src/routers/types.ts"
+  },
   "scripts": {
     "dev": "node --watch src/index.ts",
     "start": "node src/index.ts",

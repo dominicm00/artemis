@@ -1,13 +1,14 @@
-import { createTRPCContext } from '@trpc/tanstack-react-query';
-import { createTRPCClient, httpBatchLink } from '@trpc/client';
-import type { AppRouter } from '@artemis/types/api';
+import { createTRPCContext } from "@trpc/tanstack-react-query";
+import { createTRPCClient, httpBatchLink } from "@trpc/client";
+import type { AppRouter } from "@artemis/backend/router";
 
 // Create tRPC context for the new TanStack Query integration
-export const { TRPCProvider, useTRPC, useTRPCClient } = createTRPCContext<AppRouter>();
+export const { TRPCProvider, useTRPC, useTRPCClient } =
+  createTRPCContext<AppRouter>();
 
 const getBaseUrl = () => {
-  if (typeof window !== 'undefined') {
-    return '';
+  if (typeof window !== "undefined") {
+    return "";
   }
   return `http://localhost:4000`;
 };

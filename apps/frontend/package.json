@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@artemis/frontend",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -20,6 +20,7 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@artemis/backend": "workspace:*",
     "@artemis/eslint-config": "workspace:*",
     "@artemis/typescript-config": "workspace:*"
   }
