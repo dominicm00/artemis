@@ -8,6 +8,7 @@ import "./app.css";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,7 +37,8 @@ createRoot(rootElement).render(
     <QueryClientProvider client={queryClient}>
       <TRPCProvider trpcClient={trpcClient} queryClient={queryClient}>
         <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <TanStackRouterDevtools router={router} />
+        <ReactQueryDevtools />
       </TRPCProvider>
     </QueryClientProvider>
   </StrictMode>,
